@@ -8,7 +8,7 @@ const TeachersSlice = createSlice({
     initialState: TeachersArray, // Initialize teacher data from array
     reducers: {
         setTeachers: (state, action: PayloadAction<TeacherInterface[]>) => {
-            return action.payload;
+            // return action.payload;
         },
     },
 });
