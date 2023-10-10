@@ -1,0 +1,8 @@
+{
+    "name": "Language tutor finder app",
+    "short_name": "Language app",
+    "description": "A simple React app that lets you sarch for language tutors",
+    "start_url": "/",
+    "display": "fullscreen",
+    "theme_color": "#000000"
+}
