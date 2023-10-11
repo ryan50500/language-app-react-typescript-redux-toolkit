@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
-import TeachersList from './components/TeachersList'
+import TeachersList from './components/TeachersList';
+import Filters from './components/Filters'
 
 function App() {
   return (
-    <TeachersList />
+    <>
+      <Filters />
+      <TeachersList />
+    </>
   );
 }
 
