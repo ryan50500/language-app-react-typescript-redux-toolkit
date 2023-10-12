@@ -6,7 +6,10 @@ import { RootState } from '../redux/store'; // Replace with your store structure
 
 const TeachersList = () => {
     // Use useSelector to access the teacher data from the Redux store
-    const teacherData = useSelector((state: RootState) => state.teachers);
+    const teacherData = useSelector((state: RootState) => state.teachers.renderedTeachers);
+
+    // Log the teacherData to see its content
+    // console.log('teacherData:', teacherData);
 
     return (
         <>
@@ -20,4 +23,3 @@ const TeachersList = () => {
 };
 
 export default TeachersList;
-

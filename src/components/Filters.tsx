@@ -1,29 +1,28 @@
 // YourComponent.js
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setCountry, setAvailability } from '../redux/FilterSlice';
+import { setCountry, setDays } from '../redux/FilterSlice';
+import { filterTeachers } from '../redux/TeachersSlice'; // Import the filterTeachers action
 import { RootState } from '../redux/store'; // Import the RootState type
 
 const Filters = () => {
     const country = useSelector((state: RootState) => state.filters.country);
-    const availability = useSelector((state: RootState) => state.filters.availability);
+    // const days = useSelector((state: RootState) => state.filters.days);
     const dispatch = useDispatch();
+
 
     const handleCountryChange = (newCountry: string) => {
         dispatch(setCountry(newCountry));
-    };
-
-    const handleAvailabilityChange = (newAvailability: string) => {
-        dispatch(setAvailability(newAvailability));
+        dispatch(filterTeachers({ country: newCountry }));
     };
 
 
     // Use useEffect to log changes to the state
     useEffect(() => {
-        console.log('Country state changed:', country);
-        console.log('Availability state changed:', availability);
+        // console.log('Country state changed:', country);
+        // console.log('Availability state changed:', days);
         // You can perform further actions or checks here based on state changes.
-    }, [country, availability]);
+    }, [country]);
 
 
     return (
@@ -34,14 +33,6 @@ const Filters = () => {
                     type="text"
                     value={country}
                     onChange={(e) => handleCountryChange(e.target.value)}
-                />
-            </label>
-            <label>
-                Availability:
-        <input
-                    type="text"
-                    value={availability}
-                    onChange={(e) => handleAvailabilityChange(e.target.value)}
                 />
             </label>
             {/* Rest of your component */}
