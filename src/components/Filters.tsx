@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCountry, setDays } from '../redux/FilterSlice';
-import { filterTeachers } from '../redux/TeachersSlice'; // Import the filterTeachers action
 import { RootState } from '../redux/store'; // Import the RootState type
 
 const Filters = () => {
@@ -13,7 +12,6 @@ const Filters = () => {
 
     const handleCountryChange = (newCountry: string) => {
         dispatch(setCountry(newCountry));
-        dispatch(filterTeachers({ country: newCountry }));
     };
 
 

@@ -1,12 +1,10 @@
 
 import { configureStore } from '@reduxjs/toolkit';
-import teachersReducer from './TeachersSlice';
 import filtersReducer from './FilterSlice';
 
 
 const store = configureStore({
     reducer: {
-        teachers: teachersReducer,
         filters: filtersReducer
     },
 });

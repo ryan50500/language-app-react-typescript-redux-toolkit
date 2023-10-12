@@ -9,6 +9,9 @@ const initialState = {
     region: '',
 };
 
+// let newState = state.renderedTeachers.filter((teacher) => teacher.country.includes(country));
+
+
 const filterSlice = createSlice({
     name: 'filters',
     initialState,
