@@ -6,12 +6,23 @@ import TeachersArray from '../data/TeachersArray'; // Import teacher array
 import { RootState } from '../redux/store';
 
 const TeachersList = () => {
+    // country filter
     const countryFilter = useSelector((state: RootState) => state.filters.country);
+    // days filter
+    const daysFilter = useSelector((state: RootState) => state.filters.days);
 
-    // Filter the teacher array based on the filter criteria
+
+    // Filter based on country
     const newTeacherArray = TeachersArray.filter(teacher => teacher.country.includes(countryFilter));
 
-    const arrayToSend = newTeacherArray.length > 0 ? newTeacherArray : TeachersArray
+    // Filter based on days
+    const newTeacherArray2 = TeachersArray.filter(teacher => teacher.days.includes(daysFilter));
+
+
+    // const arrayToSend = newTeacherArray.length > 0 ? newTeacherArray : TeachersArray
+
+    const arrayToSend = newTeacherArray2.length > 0 ? newTeacherArray2 : TeachersArray
+
 
     return (
         <div>
