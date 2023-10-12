@@ -8,21 +8,20 @@ import { RootState } from '../redux/store';
 const TeachersList = () => {
     // country filter
     const countryFilter = useSelector((state: RootState) => state.filters.country);
-    // days filter
-    const daysFilter = useSelector((state: RootState) => state.filters.days);
+    // time filter
+    const timeFilter = useSelector((state: RootState) => state.filters.time);
+
+    // Combine both filters into a single filter condition
+    const newTeacherArray = TeachersArray.filter(teacher => {
+        return (
+            teacher.country.toLowerCase().indexOf(countryFilter.toLowerCase()) !== -1
+            && teacher.time.toLowerCase().indexOf(timeFilter.toLowerCase()) !== -1
+        );
+    });
 
 
-    // Filter based on country
-    const newTeacherArray = TeachersArray.filter(teacher => teacher.country.includes(countryFilter));
-
-    // Filter based on days
-    const newTeacherArray2 = TeachersArray.filter(teacher => teacher.days.includes(daysFilter));
-
-
-    // const arrayToSend = newTeacherArray.length > 0 ? newTeacherArray : TeachersArray
-
-    const arrayToSend = newTeacherArray2.length > 0 ? newTeacherArray2 : TeachersArray
-
+    // Determine whether to use the filtered array or the original array
+    const arrayToSend = newTeacherArray.length > 0 ? newTeacherArray : TeachersArray;
 
     return (
         <div>

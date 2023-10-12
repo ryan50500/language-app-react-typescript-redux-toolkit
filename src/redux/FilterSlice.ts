@@ -6,6 +6,7 @@ const initialState = {
     maxPrice: 100,
     country: '',
     days: '',
+    time: '',
     region: '',
 };
 
@@ -28,8 +29,11 @@ const filterSlice = createSlice({
         setDays: (state, action) => {
             state.days = action.payload;
         },
+        setTime: (state, action) => {
+            state.time = action.payload;
+        },
     },
 });
 
-export const { setMinPrice, setMaxPrice, setCountry, setDays } = filterSlice.actions;
+export const { setMinPrice, setMaxPrice, setCountry, setDays, setTime } = filterSlice.actions;
 export default filterSlice.reducer;
