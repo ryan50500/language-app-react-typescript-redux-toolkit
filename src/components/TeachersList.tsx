@@ -1,31 +1,36 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Teacher from './Teacher';
-import TeachersArray from '../data/TeachersArray'; // Import teacher array
+import OriginalArray from '../data/OriginalArray'; // Import teacher array
 
 import { RootState } from '../redux/store';
 
 const TeachersList = () => {
-    // country filter
+    // filters
     const countryFilter = useSelector((state: RootState) => state.filters.country);
-    // time filter
     const timeFilter = useSelector((state: RootState) => state.filters.time);
+    const maxPriceFilter = useSelector((state: RootState) => state.filters.maxPrice);
+    const dayFilter = useSelector((state: RootState) => state.filters.day);
+
 
     // Combine both filters into a single filter condition
-    const newTeacherArray = TeachersArray.filter(teacher => {
-        return (
-            teacher.country.toLowerCase().indexOf(countryFilter.toLowerCase()) !== -1
-            && teacher.time.toLowerCase().indexOf(timeFilter.toLowerCase()) !== -1
-        );
-    });
+    const filteredArray = OriginalArray.filter(teacher =>
+        teacher.country.toLowerCase().indexOf(countryFilter.toLowerCase()) !== -1
+        && teacher.time.toLowerCase().indexOf(timeFilter.toLowerCase()) !== -1
+        // && teacher.price < 20
+
+        // we need to type the day exactly with a Capital (which is is fine so we are clicking not typing)
+        // && teacher.days.includes(dayFilter)
+    );
 
 
-    // Determine whether to use the filtered array or the original array
-    const arrayToSend = newTeacherArray.length > 0 ? newTeacherArray : TeachersArray;
+
+    // use the filtered array (if we have it) or the original array
+    const TeachersArray = filteredArray.length > 0 ? filteredArray : OriginalArray;
 
     return (
         <div>
-            {arrayToSend.map(teacher => (
+            {TeachersArray.map(teacher => (
                 <Teacher key={teacher.id} teacher={teacher} />
             ))}
         </div>

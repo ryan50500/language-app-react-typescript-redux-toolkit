@@ -1,5 +1,5 @@
 
-const TeachersArray = [
+const OriginalArray = [
     {
         language: 'Polish',
         flag: 'https://flagcdn.com/48x36/pl.png',
@@ -772,4 +772,4 @@ const TeachersArray = [
     }
 ]
 
-export default TeachersArray
+export default OriginalArray
