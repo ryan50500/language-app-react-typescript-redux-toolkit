@@ -12,8 +12,8 @@ const Filters = () => {
     const dispatch = useDispatch();
 
     // set max price 
-    const handlePriceChange = (newPrice: string) => {
-        dispatch(setMaxPrice(newPrice));
+    const handlePriceChange = (newPrice: number) => {
+        dispatch(setMaxPrice(Number(newPrice)));
     };
     // set country
     const handleCountryChange = (newCountry: string) => {
@@ -28,6 +28,8 @@ const Filters = () => {
         dispatch(setDay(newDay));
     };
 
+    console.log(maxPrice)
+
     // put these filters below into their own component
     return (
         <div>
@@ -36,7 +38,7 @@ const Filters = () => {
         <input
                     type="text"
                     value={maxPrice}
-                    onChange={(e) => handlePriceChange(e.target.value)}
+                    onChange={(e) => handlePriceChange(Number(e.target.value))}
                 />
             </label>
             <label>

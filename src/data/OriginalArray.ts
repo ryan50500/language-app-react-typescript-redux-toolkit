@@ -1,5 +1,5 @@
 
-const OriginalArray = [
+const TeachersArray = [
     {
         language: 'Polish',
         flag: 'https://flagcdn.com/48x36/pl.png',
@@ -107,7 +107,7 @@ const OriginalArray = [
         country: 'Poland',
         price: 9,
         time: 'morning afternoon',
-        days: ['Mon ', 'Tue ', 'Wed', 'Thu'],
+        days: ['Mon', 'Tue', 'Wed', 'Thu'],
         reviews: '35',
         rating: 5,
         id: 7
@@ -135,7 +135,7 @@ const OriginalArray = [
         country: 'Poland',
         price: 8,
         time: 'evening',
-        days: ['Mon ', 'Tue ', 'Wed ', 'Thu ', 'Fri '],
+        days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
         reviews: '6',
         rating: 4,
         id: 9,
@@ -149,7 +149,7 @@ const OriginalArray = [
         country: 'Poland',
         price: 15,
         time: 'afternoon evening',
-        days: ['Thu ', 'Fri ', 'Sat ', 'Sun '],
+        days: ['Thu', 'Fri', 'Sat', 'Sun'],
         reviews: '39',
         rating: 4.8,
         id: 10,
@@ -772,4 +772,4 @@ const OriginalArray = [
     }
 ]
 
-export default OriginalArray
+export default TeachersArray

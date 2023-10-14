@@ -13,16 +13,14 @@ const TeachersList = () => {
     const dayFilter = useSelector((state: RootState) => state.filters.day);
 
 
-    // Combine both filters into a single filter condition
+    // apply filters to the original array
     const filteredArray = OriginalArray.filter(teacher =>
         teacher.country.toLowerCase().indexOf(countryFilter.toLowerCase()) !== -1
         && teacher.time.toLowerCase().indexOf(timeFilter.toLowerCase()) !== -1
-        // && teacher.price < 20
-
-        // we need to type the day exactly with a Capital (which is is fine so we are clicking not typing)
-        // && teacher.days.includes(dayFilter)
+        && teacher.price < maxPriceFilter
+        // we need to type the day exactly with a Capital (which is is fine since we are clicking not typing)
+        && (dayFilter === '' || teacher.days.includes(dayFilter))
     );
-
 
 
     // use the filtered array (if we have it) or the original array
