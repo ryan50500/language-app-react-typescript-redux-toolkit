@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import TeachersList from './components/TeachersList';
+import FilterLogic from './components/FilterLogic';
 import Filters from './components/Filters'
 
 function App() {
   return (
     <>
       <Filters />
-      <TeachersList />
+      <FilterLogic />
     </>
   );
 }

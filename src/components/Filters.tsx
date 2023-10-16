@@ -3,18 +3,21 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setMaxPrice, setCountry, setDay, setTime } from '../redux/FilterSlice';
 import { RootState } from '../redux/store'; // Import the RootState type
+import PriceFilter from './PriceFilter'
 
 const Filters = () => {
     const country = useSelector((state: RootState) => state.filters.country);
     const time = useSelector((state: RootState) => state.filters.time);
-    const maxPrice = useSelector((state: RootState) => state.filters.maxPrice);
+    // const maxPrice = useSelector((state: RootState) => state.filters.maxPrice);
     const day = useSelector((state: RootState) => state.filters.day);
+
     const dispatch = useDispatch();
 
-    // set max price 
-    const handlePriceChange = (newPrice: number) => {
-        dispatch(setMaxPrice(Number(newPrice)));
-    };
+    // // set max price 
+    // const handlePriceChange = (newPrice: number) => {
+    //     dispatch(setMaxPrice(Number(newPrice)));
+    // };
+
     // set country
     const handleCountryChange = (newCountry: string) => {
         dispatch(setCountry(newCountry));
@@ -28,19 +31,12 @@ const Filters = () => {
         dispatch(setDay(newDay));
     };
 
-    console.log(maxPrice)
+    // console.log(maxPrice)
 
     // put these filters below into their own component
     return (
         <div>
-            <label>
-                Max Price:
-        <input
-                    type="text"
-                    value={maxPrice}
-                    onChange={(e) => handlePriceChange(Number(e.target.value))}
-                />
-            </label>
+            <PriceFilter />
             <label>
                 Country:
         <input

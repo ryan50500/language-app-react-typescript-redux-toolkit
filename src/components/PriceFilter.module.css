@@ -1,0 +1,37 @@
+/* input slider */
+.price__input {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #3bb3bd;
+    height: 7px;
+    margin: 1rem 0;
+    opacity: .8;
+}
+/* input slider white circle */
+.price__input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgb(59, 179, 189);
+  }
+  .price__input::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgb(59, 179, 189);
+  }
+  .price__input::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgb(59, 179, 189);
+  }
+
