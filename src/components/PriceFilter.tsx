@@ -15,8 +15,8 @@ const PriceFilter = () => {
     return (
         <div>
             <label>
-                Max Price:
-             <input type="range" className={styles.price__input} value={maxPrice} onChange={(e) => handlePriceChange(Number(e.target.value))}
+                Max Price: {maxPrice}
+                <input type="range" className={styles.price__input} value={maxPrice} onChange={(e) => handlePriceChange(Number(e.target.value))}
                 />
             </label>
         </div>
