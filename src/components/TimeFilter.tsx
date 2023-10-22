@@ -12,6 +12,7 @@ const TimeFilter = () => {
     const handleTimeChange = (newTime: string) => {
         dispatch(setTime(newTime));
     };
+
     return (
         <div>
             <label>

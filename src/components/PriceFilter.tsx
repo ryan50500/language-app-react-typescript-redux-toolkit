@@ -12,6 +12,7 @@ const PriceFilter = () => {
     const handlePriceChange = (newPrice: number) => {
         dispatch(setMaxPrice(Number(newPrice)));
     };
+
     return (
         <div>
             <label>

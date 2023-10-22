@@ -1,0 +1,10 @@
+
+.no__results {
+    display: flex;
+    margin: "15px";
+    justify-content: center;
+    background-color: white;
+    padding: 1.2rem;
+    width: 500px;
+    margin: 0 auto;
+}
