@@ -29,7 +29,7 @@ const FilterLogic = () => {
 
     return (
         <>
-            {/* if we have at least one match from the filter, show the results, otherwise show error message */}
+            {/* if we have at least one match from the filter, show the results, otherwise show 'NoResultsFound' */}
             {filteredArray.length > 0 ? (
                 <div>
                     {filteredArray.map(teacher => (
