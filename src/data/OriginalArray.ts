@@ -261,7 +261,7 @@ const TeachersArray = [
         country: 'Spain',
         price: 13,
         time: 'afternoon, evening',
-        days: ['Mon ', 'Fri ', 'Sat ', 'Sun '],
+        days: ['Mon', 'Fri ', 'Sat ', 'Sun '],
         reviews: '32',
         rating: 4.5,
         id: 18

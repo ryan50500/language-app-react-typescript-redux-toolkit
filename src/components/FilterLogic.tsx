@@ -13,6 +13,11 @@ const FilterLogic = () => {
     const maxPriceFilter = useSelector((state: RootState) => state.filters.maxPrice);
     const dayFilter = useSelector((state: RootState) => state.filters.day);
 
+    // remove whitespace from days property in the orginal teacher array
+    OriginalArray.forEach(teacher => {
+        teacher.days = teacher.days.map(day => day.trim());
+    });
+
     // apply filters to the original array
     const filteredArray = OriginalArray.filter(teacher =>
         teacher.country.toLowerCase().indexOf(countryFilter.toLowerCase()) !== -1
@@ -21,11 +26,6 @@ const FilterLogic = () => {
         // we need to type the day exactly with a Capital (which is is fine since we are clicking not typing)
         && (dayFilter === '' || teacher.days.includes(dayFilter))
     );
-
-    // use the filtered array (if we have it) or the original array
-    // const TeachersArray = filteredArray
-
-    console.log(filteredArray.length);
 
     return (
         <>
