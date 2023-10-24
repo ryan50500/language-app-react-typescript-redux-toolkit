@@ -4,14 +4,17 @@ import PriceFilter from './PriceFilter';
 import CountryFilter from './CountryFilter';
 import TimeFilter from './TimeFilter';
 import DayFilter from './DayFilter';
+import FilterWrapper from './FilterWrapper';
 
 const Filters = () => {
     return (
         <div>
             <CountryFilter />
-            <PriceFilter />
-            <TimeFilter />
-            <DayFilter />
+            <FilterWrapper>
+                <PriceFilter />
+                <TimeFilter />
+                <DayFilter />
+            </FilterWrapper>
         </div>
     );
 };

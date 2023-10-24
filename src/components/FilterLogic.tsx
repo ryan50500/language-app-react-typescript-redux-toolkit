@@ -18,7 +18,6 @@ const FilterLogic = () => {
         teacher.days = teacher.days.map(day => day.trim());
     });
 
-
     // apply filters to the original array
     const filteredArray = OriginalArray.filter(teacher =>
         teacher.country.toLowerCase().indexOf(countryFilter.toLowerCase()) !== -1
