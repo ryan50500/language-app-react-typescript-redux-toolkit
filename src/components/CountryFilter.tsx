@@ -13,13 +13,13 @@ const CountryFilter = () => {
         dispatch(setCountry(newCountry));
     };
     return (
-        <div>
-            <label>
-                Country:
-             <input type="text" value={country} onChange={(e) => handleCountryChange(e.target.value)}
+        <>
+            <div className={styles.search__bar__wrap}>
+                <h1 className={styles.search__bar__title}>Which language do you want to learn?</h1>
+                <input className={styles.search__bar__input} type="text" placeholder="Search Language" value={country} onChange={(e) => handleCountryChange(e.target.value)}
                 />
-            </label>
-        </div>
+            </div>
+        </>
     )
 }
 
