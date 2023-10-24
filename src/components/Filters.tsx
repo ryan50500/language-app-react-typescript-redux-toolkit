@@ -9,9 +9,9 @@ import FilterWrapper from './FilterWrapper';
 const Filters = () => {
     return (
         <div>
-            <CountryFilter />
             <FilterWrapper>
                 <PriceFilter />
+                <CountryFilter />
                 <TimeFilter />
                 <DayFilter />
             </FilterWrapper>

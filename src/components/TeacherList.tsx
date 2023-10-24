@@ -6,7 +6,7 @@ import OriginalArray from '../data/OriginalArray'; // Import teacher array
 
 import { RootState } from '../redux/store';
 
-const FilterLogic = () => {
+const TeacherList = () => {
     // filters
     const countryFilter = useSelector((state: RootState) => state.filters.country);
     const timeFilter = useSelector((state: RootState) => state.filters.time);
@@ -43,4 +43,4 @@ const FilterLogic = () => {
     );
 };
 
-export default FilterLogic;
+export default TeacherList;

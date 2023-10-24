@@ -8,17 +8,14 @@ const CountryFilter = () => {
     const country = useSelector((state: RootState) => state.filters.country);
     const dispatch = useDispatch();
 
-    // set max price 
+    // set country 
     const handleCountryChange = (newCountry: string) => {
         dispatch(setCountry(newCountry));
     };
     return (
         <>
-            <div className={styles.search__bar__wrap}>
-                <h1 className={styles.search__bar__title}>Which language do you want to learn?</h1>
-                <input className={styles.search__bar__input} type="text" placeholder="Search Language" value={country} onChange={(e) => handleCountryChange(e.target.value)}
-                />
-            </div>
+            <h2>country</h2>
+            <input type="text" placeholder="Search Country" value={country} onChange={(e) => handleCountryChange(e.target.value)} />
         </>
     )
 }
