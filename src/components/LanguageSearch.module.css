@@ -1,0 +1,10 @@
+.language__search {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 36px 0;
+}
+.language__search__input {
+    margin-top: 10px;
+}
