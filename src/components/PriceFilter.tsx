@@ -15,26 +15,19 @@ const PriceFilter = () => {
     const handlePriceChange = (newPrice: number) => {
         setShowPrice(true)
         dispatch(setMaxPrice(Number(newPrice)));
-        console.log(maxPrice)
-
     };
     // remove max price filter
     const removePriceFilter = () => {
         setShowPrice(false)
         dispatch(setMaxPrice(Number(100)));
-        console.log(maxPrice)
     };
     // show price slider when user hovers on filter
     const showPriceSlider = () => {
-        console.log(priceOnHover)
         setPriceOnHover(true)
-        console.log(priceOnHover)
     };
     // hide price slider when use hovers away
     const hidePriceSlider = () => {
-        console.log(priceOnHover)
         setPriceOnHover(false)
-        console.log(priceOnHover)
     };
 
     return (
