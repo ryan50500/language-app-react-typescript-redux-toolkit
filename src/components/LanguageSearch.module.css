@@ -5,6 +5,13 @@
     align-items: center;
     margin: 36px 0;
 }
-.language__search__input {
-    margin-top: 10px;
+.language__search h1 {
+    font-size: 1.4rem;
 }
+.language__search__input {
+    margin-top: 20px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+

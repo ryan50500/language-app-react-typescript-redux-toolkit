@@ -1,12 +1,12 @@
 import React from 'react';
-import TeacherList from './components/TeacherList';
+import FilterLogic from './components/FilterLogic';
 import Filters from './components/Filters'
 
 function App() {
   return (
     <>
       <Filters />
-      <TeacherList />
+      <FilterLogic />
     </>
   );
 }

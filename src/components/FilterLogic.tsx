@@ -6,12 +6,13 @@ import OriginalArray from '../data/OriginalArray'; // Import teacher array
 
 import { RootState } from '../redux/store';
 
-const TeacherList = () => {
+const FilterLogic = () => {
     // filters
     const countryFilter = useSelector((state: RootState) => state.filters.country);
     const timeFilter = useSelector((state: RootState) => state.filters.time);
     const maxPriceFilter = useSelector((state: RootState) => state.filters.maxPrice);
     const dayFilter = useSelector((state: RootState) => state.filters.day);
+    const languageFilter = useSelector((state: RootState) => state.filters.language);
 
     // remove whitespace from days property in the orginal teacher array
     OriginalArray.forEach(teacher => {
@@ -21,6 +22,7 @@ const TeacherList = () => {
     // apply filters to the original array
     const filteredArray = OriginalArray.filter(teacher =>
         teacher.country.toLowerCase().indexOf(countryFilter.toLowerCase()) !== -1
+        && teacher.language.toLowerCase().indexOf(languageFilter.toLowerCase()) !== -1
         && teacher.time.toLowerCase().indexOf(timeFilter.toLowerCase()) !== -1
         && teacher.price < maxPriceFilter
         // we need to type the day exactly with a Capital (which is is fine since we are clicking not typing)
@@ -43,4 +45,4 @@ const TeacherList = () => {
     );
 };
 
-export default TeacherList;
+export default FilterLogic;

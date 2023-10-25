@@ -6,6 +6,7 @@ const initialState = {
     country: '',
     day: '',
     time: '',
+    language: ''
 };
 
 // let newState = state.renderedTeachers.filter((teacher) => teacher.country.includes(country));
@@ -27,8 +28,11 @@ const filterSlice = createSlice({
         setTime: (state, action) => {
             state.time = action.payload;
         },
+        setLanguage: (state, action) => {
+            state.language = action.payload;
+        },
     },
 });
 
-export const { setMaxPrice, setCountry, setDay, setTime } = filterSlice.actions;
+export const { setMaxPrice, setCountry, setDay, setTime, setLanguage } = filterSlice.actions;
 export default filterSlice.reducer;
