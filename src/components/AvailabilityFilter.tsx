@@ -44,18 +44,13 @@ const AvailabilityFilter = () => {
     //  remove time filter
     const removeTimeFilter = () => {
         setShowTime(false)
+        dispatch(setTime(''));
     };
     // remove day filter
     const removeDayFilter = () => {
         setShowDay(false)
+        dispatch(setDay(''));
     };
-
-
-    // NEED TO BOTH STYLE CROSSES
-    // NEED TO BOTH STYLE CROSSES
-    // NEED TO BOTH STYLE CROSSES
-
-
 
     return (
         <>
@@ -76,7 +71,6 @@ const AvailabilityFilter = () => {
                 </label>
             </div>
 
-            {/* THE CODE WE NEED BELOW */}
             {/* price filter */}
             <div className={styles.price__content} onMouseEnter={showAvailability} onMouseLeave={hideAvailability}>
                 <h3>I'M AVAILABLE</h3>
