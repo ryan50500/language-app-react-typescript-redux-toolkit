@@ -1,0 +1,7 @@
+
+.filter__wrapper {
+    display: flex;
+    justify-content: center;
+    width: 605px;
+    margin: 0 auto;
+}

@@ -1,16 +1,22 @@
 /* price content */
+.country__wrapper {
+  flex-basis: 33.33%;
+}
 .country__content {
     border-radius: 20px;
     background-color: white;
     margin-bottom: 7px; 
-    padding: 13px 23px;
-    height: 100%;
+    padding: 0 23px;
+    height: 67px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .country__content h3 {
     color: #8a959e;
     font-size: 12.5px;
     letter-spacing: 1px;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
   }
   .country__content p {
     color: black;

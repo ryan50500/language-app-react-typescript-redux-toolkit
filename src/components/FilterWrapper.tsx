@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import styles from './FilterWrapper.module.css'
 
 interface FilterWrapperProps {
     children: ReactNode;
@@ -6,7 +7,7 @@ interface FilterWrapperProps {
 
 const FilterWrapper: React.FC<FilterWrapperProps> = ({ children }) => {
     return (
-        <div style={{ display: 'flex' }}>
+        <div className={styles.filter__wrapper}>
             {children}
         </div>
     );
