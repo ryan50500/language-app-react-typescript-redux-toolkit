@@ -25,7 +25,6 @@ const FilterLogic = () => {
         && teacher.language.toLowerCase().indexOf(languageFilter.toLowerCase()) !== -1
         && teacher.time.toLowerCase().indexOf(timeFilter.toLowerCase()) !== -1
         && teacher.price < maxPriceFilter
-        // we need to type the day exactly with a Capital (which is is fine since we are clicking not typing)
         && (dayFilter === '' || teacher.days.includes(dayFilter))
     );
 
