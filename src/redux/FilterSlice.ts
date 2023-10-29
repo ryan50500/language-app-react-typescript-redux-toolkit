@@ -8,7 +8,7 @@ const initialState = {
     time: '',
     language: '',
     showDay: false,
-    showTime: false
+    showTime: false,
 };
 
 // let newState = state.renderedTeachers.filter((teacher) => teacher.country.includes(country));

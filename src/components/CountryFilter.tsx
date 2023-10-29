@@ -15,9 +15,9 @@ const CountryFilter = () => {
     return (
         <>
             <div className={styles.country__wrapper}>
-                <div className={styles.country__content}>
+                <div className={styles.country__content} >
                     <h3>COUNTRY OF BIRTH</h3>
-                    <input type="text" placeholder="Search Country" value={country} onChange={(e) => handleCountryChange(e.target.value)} />
+                    <input type="text" placeholder="Search Country..." value={country} onChange={(e) => handleCountryChange(e.target.value)} />
                 </div>
             </div>
         </>

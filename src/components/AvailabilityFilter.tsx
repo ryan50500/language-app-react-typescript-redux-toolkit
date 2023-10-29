@@ -14,42 +14,27 @@ const AvailabilityFilter = () => {
 
     const dispatch = useDispatch();
 
-    // const [showTime, setShowTime] = useState<boolean>(false)
-    // const [showDay, setShowDay] = useState<boolean>(false)
+    // determines whether to show the <AvailabilityHovered /> component when hovered 
+    const [availabilityOnHover, setAvailabilityOnHover] = useState<boolean>(false);
 
-    const [priceOnHover, setPriceOnHover] = useState<boolean>(false)
 
-    // set day 
-    // const handleDayChange = (newDay: string) => {
-    //     dispatch(setDay(newDay));
-    //     setShowDay(true)
-    // };
-    // set time 
-    // const handleTimeChange = (newTime: string) => {
-    //     dispatch(setTime(newTime));
-    //     setShowTime(true)
-    // };
-
-    // Show Availability 
+    // Show Availability filter
     const showAvailability = () => {
-        // console.log('hello')
+        setAvailabilityOnHover(true)
+        console.log(availabilityOnHover)
     };
-    // Hide Availability 
+    // Hide Availability filter
     const hideAvailability = () => {
-        // console.log('hello')
+        setAvailabilityOnHover(false)
     };
 
     //  remove time filter
-    const removeTimeFilter = (e: React.MouseEvent) => {
-        e.stopPropagation();
-        console.log('clicked TIME')
+    const removeTimeFilter = () => {
         dispatch(setShowTime(false));
         dispatch(setTime(''));
     };
     // remove day filter
-    const removeDayFilter = (e: React.MouseEvent) => {
-        e.stopPropagation();
-        console.log('clicked DAY')
+    const removeDayFilter = () => {
         dispatch(setShowDay(false));
         dispatch(setDay(''));
     };
@@ -58,8 +43,8 @@ const AvailabilityFilter = () => {
     return (
         <>
             {/* availability filter */}
-            <div className={styles.availability__wrapper}>
-                <div className={styles.availability__content} onMouseEnter={showAvailability} onMouseLeave={hideAvailability}>
+            <div className={styles.availability__wrapper} onMouseEnter={showAvailability} onMouseLeave={hideAvailability}>
+                <div className={styles.availability__content}>
                     <h3>I'M AVAILABLE</h3>
                     {(!time && !day) && <p style={{ textAlign: 'center' }}>Any time</p>}
                     <div className={styles.availability__content__flex}>
@@ -77,13 +62,14 @@ const AvailabilityFilter = () => {
                         </div>
                     </div>
                 </div>
+                {availabilityOnHover && (
+                    <AvailabilityHovered />
+                )}
             </div>
-            {/* filter shows when user hovers */}
-            <AvailabilityHovered />
         </>
+
     )
 }
 
 export default AvailabilityFilter
-
 

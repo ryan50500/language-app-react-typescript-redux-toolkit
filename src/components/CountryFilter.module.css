@@ -1,6 +1,7 @@
 /* price content */
 .country__wrapper {
   flex-basis: 33.33%;
+  width: 33.33%;
 }
 .country__content {
     border-radius: 20px;
@@ -12,11 +13,22 @@
     flex-direction: column;
     justify-content: center;
   }
+  .country__content:hover {
+    box-shadow: 3px 3px 9px rgba(0,0,0,.1);
+  }
   .country__content h3 {
     color: #8a959e;
     font-size: 12.5px;
     letter-spacing: 1px;
     margin-bottom: 10px;
+  }
+  .country__content input {
+    padding: 0;
+    border: none;
+    outline: none;
+  }
+  .country__content input:focus::placeholder {
+    color: transparent;
   }
   .country__content p {
     color: black;
