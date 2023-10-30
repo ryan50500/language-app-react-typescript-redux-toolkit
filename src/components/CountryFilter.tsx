@@ -33,9 +33,10 @@ const CountryFilter = () => {
               placeholder="Search Country..."
               value={country}
               onChange={(e) => handleCountryChange(e.target.value)}
+              style={{ width: country ? 40 + country.length + "px" : "auto" }}
             />
             {/* conditionally show country cross SVG */}
-            {showCountry && (
+            {showCountry && country.length > 0 && (
               <div
                 className={styles.price__cross}
                 onClick={removeCountryFilter}
