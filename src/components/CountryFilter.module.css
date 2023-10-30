@@ -4,34 +4,63 @@
   width: 33.33%;
 }
 .country__content {
-    border-radius: 20px;
-    background-color: white;
-    margin-bottom: 7px; 
-    padding: 0 23px;
-    height: 67px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .country__content:hover {
-    box-shadow: 3px 3px 9px rgba(0,0,0,.1);
-  }
-  .country__content h3 {
-    color: #8a959e;
-    font-size: 12.5px;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-  }
-  .country__content input {
-    padding: 0;
-    border: none;
-    outline: none;
-  }
-  .country__content input:focus::placeholder {
-    color: transparent;
-  }
-  .country__content p {
-    color: black;
-    font-size: 14.5px;
-    letter-spacing: 1px;
-  }
+  border-radius: 20px;
+  background-color: white;
+  margin-bottom: 7px;
+  padding: 0 23px;
+  height: 67px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.country__content:hover {
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d3d3d3;
+}
+.country__content h3 {
+  color: #8a959e;
+  font-size: 12.5px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.country__content input {
+  padding: 0;
+  border: none;
+  outline: none;
+}
+.country__content input:focus::placeholder {
+  color: transparent;
+}
+.country__content p {
+  color: black;
+  font-size: 14.5px;
+  letter-spacing: 1px;
+}
+
+/* price cross */
+.price__cross {
+  background-color: #dadfe1;
+  border-radius: 50%;
+  color: gray;
+  font-family: sans-serif;
+  font-size: 12px;
+  height: 20px;
+  margin-left: 7px;
+  position: relative;
+  width: 20px;
+}
+.price__cross:hover {
+  cursor: pointer;
+}
+.price__cross__x {
+  fill: #8a959e;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* input field wrapper */
+.country__input {
+  display: flex;
+}
