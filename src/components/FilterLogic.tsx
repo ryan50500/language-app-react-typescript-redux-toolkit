@@ -56,6 +56,7 @@ const FilterLogic = () => {
               <Teacher key={teacher.id} teacher={teacher} />
             ))}
           </div>
+          {/* if teachersToShow does NOT exceed the filteredArray length, show <ViewMoreTeachers /> component */}
           {filteredArray.length > teachersToShow && <ViewMoreTeachers />}
         </>
       ) : (
