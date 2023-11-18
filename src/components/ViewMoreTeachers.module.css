@@ -9,6 +9,6 @@
 }
 .view__more:hover {
   cursor: pointer;
-  transform: scale(1.07);
+  transform: scale(1.02);
   transition: transform 0.3s;
 }
