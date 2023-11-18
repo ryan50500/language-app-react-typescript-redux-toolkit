@@ -1,12 +1,23 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { setShowModal } from "../redux/ModalSlice";
 import TeacherInterface from "../interfaces/TeacherInterface";
 import styles from "./Teacher.module.css";
+// import { RootState } from "../redux/store"; // Import the RootState type
 
 interface TeacherProps {
   teacher: TeacherInterface;
 }
 
 const Teacher = ({ teacher }: TeacherProps) => {
+  // const showModal = useSelector((state: RootState) => state.modal.showModal);
+  const dispatch = useDispatch();
+
+  // set modal
+  const openModal = () => {
+    dispatch(setShowModal(true));
+  };
+
   return (
     <div key={teacher.id} className={`${styles.card}`}>
       <div className={styles.teacher}>
@@ -67,7 +78,9 @@ const Teacher = ({ teacher }: TeacherProps) => {
           </div>
           <span style={{ fontSize: "13.5px", color: "gray" }}>1-hour lesson</span>
         </div>
-        <button className={styles.teacher__buttons}>View contact info</button>
+        <button className={styles.teacher__buttons} onClick={openModal}>
+          View contact info
+        </button>
       </div>
     </div>
   );
