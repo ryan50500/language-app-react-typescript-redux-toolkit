@@ -20,14 +20,12 @@ const Modal = () => {
 
   return (
     <>
-      {showModal && (
-        <div className={styles.modal}>
-          <h1 onClick={handleCloseModal}>X</h1>
-          <h3>{modalTeacherName}</h3>
-          <h3>{modalTeacherExperience}</h3>
-          <h3>{modalTeacherPrice}</h3>
-        </div>
-      )}
+      <div className={styles.modal}>
+        <h1 onClick={handleCloseModal}>X</h1>
+        <h3>{modalTeacherName}</h3>
+        <h3>{modalTeacherExperience}</h3>
+        <h3>{modalTeacherPrice}</h3>
+      </div>
     </>
   );
 };
