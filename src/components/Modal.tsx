@@ -28,11 +28,25 @@ const Modal = () => {
             <div className={styles.modal__close__inner}></div>
           </div>
         </div>
-        <h3>{TeacherName}</h3>
-        <h3>{TeacherEmail}</h3>
-        <h3>{TeacherSkypeID}</h3>
-        <h3>{TeacherPlatform}</h3>
-        <h3>{TeacherWhatsApp}</h3>
+        <div className={styles.modal__wrapper}>
+          <h3>
+            <strong>Name:</strong> {TeacherName}
+          </h3>
+          <h3>
+            <strong>Email:</strong> {TeacherEmail}
+          </h3>
+          <h3>
+            <strong>SkypID:</strong> {TeacherSkypeID}
+          </h3>
+          <h3>
+            <strong>Teacher Platform:</strong> {TeacherPlatform}
+          </h3>
+          {TeacherWhatsApp && (
+            <h3>
+              <strong>WhatsApp:</strong> {TeacherWhatsApp}
+            </h3>
+          )}
+        </div>
       </div>
     </>
   );
