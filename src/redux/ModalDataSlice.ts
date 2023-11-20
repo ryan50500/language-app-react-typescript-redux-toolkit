@@ -1,26 +1,40 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  modalDataName: "",
-  modalDataExperience: 6,
-  modalDataPrice: 5.5,
+  ModalName: "",
+  ModalEmail: "",
+  ModalSkypeID: "",
+  ModalPlatform: "",
+  ModalWhatsApp: "",
 };
 
 const ModalDataSlice = createSlice({
   name: "teacher modal data",
   initialState,
   reducers: {
-    setModalDataName: (state, action) => {
-      state.modalDataName = action.payload;
+    setModalName: (state, action) => {
+      state.ModalName = action.payload;
     },
-    setModalDataExperience: (state, action) => {
-      state.modalDataExperience = action.payload;
+    setModalEmail: (state, action) => {
+      state.ModalEmail = action.payload;
     },
-    setModalDataPrice: (state, action) => {
-      state.modalDataPrice = action.payload;
+    setModalSkypeID: (state, action) => {
+      state.ModalSkypeID = action.payload;
+    },
+    setModalPlatform: (state, action) => {
+      state.ModalPlatform = action.payload;
+    },
+    setModalWhatsApp: (state, action) => {
+      state.ModalWhatsApp = action.payload;
     },
   },
 });
 
-export const { setModalDataName, setModalDataExperience, setModalDataPrice } = ModalDataSlice.actions;
+export const {
+  setModalName,
+  setModalEmail,
+  setModalSkypeID,
+  setModalPlatform,
+  setModalWhatsApp,
+} = ModalDataSlice.actions;
 export default ModalDataSlice.reducer;

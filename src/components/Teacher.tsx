@@ -1,7 +1,13 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { setShowModal } from "../redux/ModalSlice";
-import { setModalDataName, setModalDataExperience, setModalDataPrice } from "../redux/ModalDataSlice";
+import {
+  setModalName,
+  setModalEmail,
+  setModalSkypeID,
+  setModalPlatform,
+  setModalWhatsApp,
+} from "../redux/ModalDataSlice";
 import TeacherInterface from "../interfaces/TeacherInterface";
 import styles from "./Teacher.module.css";
 
@@ -16,9 +22,11 @@ const Teacher = ({ teacher }: TeacherProps) => {
   const openModal = () => {
     dispatch(setShowModal(true));
     // set modal data
-    dispatch(setModalDataName(teacher.name));
-    dispatch(setModalDataExperience(teacher.experience));
-    dispatch(setModalDataPrice(teacher.price));
+    dispatch(setModalName(teacher.name));
+    dispatch(setModalEmail(teacher.email));
+    dispatch(setModalSkypeID(teacher.skypeID));
+    dispatch(setModalPlatform(teacher.teachingPlatform));
+    dispatch(setModalWhatsApp(teacher.whatsApp));
   };
 
   return (

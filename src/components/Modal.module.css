@@ -4,12 +4,35 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* flex-direction: column; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 510px;
   height: 350px;
   transform: translate(-50%, -50%);
   background-color: white;
+  z-index: 1;
+}
+.modal__close {
+  height: 32px;
+  position: fixed;
+  right: 11px;
+  top: 10px;
+  width: 27px;
+}
+.modal__close__outer {
+  background-color: #000;
+  height: 31px;
+  width: 2px;
+  z-index: 1;
+  margin-left: 12px;
+  transform: rotate(45deg);
+}
+.modal__close__inner {
+  transform: rotate(90deg);
+  background-color: #000;
+  height: 31px;
+  width: 2px;
+  z-index: 2;
 }

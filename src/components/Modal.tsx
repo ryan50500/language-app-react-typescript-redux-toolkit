@@ -8,9 +8,11 @@ const Modal = () => {
   // the modal component
   const showModal = useSelector((state: RootState) => state.modal.showModal);
   // teacher data to display in modal
-  const modalTeacherName = useSelector((state: RootState) => state.modalData.modalDataName);
-  const modalTeacherExperience = useSelector((state: RootState) => state.modalData.modalDataExperience);
-  const modalTeacherPrice = useSelector((state: RootState) => state.modalData.modalDataPrice);
+  const TeacherName = useSelector((state: RootState) => state.modalData.ModalName);
+  const TeacherEmail = useSelector((state: RootState) => state.modalData.ModalEmail);
+  const TeacherSkypeID = useSelector((state: RootState) => state.modalData.ModalSkypeID);
+  const TeacherPlatform = useSelector((state: RootState) => state.modalData.ModalPlatform);
+  const TeacherWhatsApp = useSelector((state: RootState) => state.modalData.ModalWhatsApp);
 
   const dispatch = useDispatch();
 
@@ -21,10 +23,16 @@ const Modal = () => {
   return (
     <>
       <div className={styles.modal}>
-        <h1 onClick={handleCloseModal}>X</h1>
-        <h3>{modalTeacherName}</h3>
-        <h3>{modalTeacherExperience}</h3>
-        <h3>{modalTeacherPrice}</h3>
+        <div className={styles.modal__close} onClick={handleCloseModal}>
+          <div className={styles.modal__close__outer}>
+            <div className={styles.modal__close__inner}></div>
+          </div>
+        </div>
+        <h3>{TeacherName}</h3>
+        <h3>{TeacherEmail}</h3>
+        <h3>{TeacherSkypeID}</h3>
+        <h3>{TeacherPlatform}</h3>
+        <h3>{TeacherWhatsApp}</h3>
       </div>
     </>
   );
