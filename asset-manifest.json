@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/language-app-react-typescript-redux-toolkit-pagination/static/css/main.926d660e.css",
-    "main.js": "/language-app-react-typescript-redux-toolkit-pagination/static/js/main.9d64c118.js",
+    "main.css": "/language-app-react-typescript-redux-toolkit-pagination/static/css/main.dc295dc4.css",
+    "main.js": "/language-app-react-typescript-redux-toolkit-pagination/static/js/main.5c16c0e1.js",
     "index.html": "/language-app-react-typescript-redux-toolkit-pagination/index.html",
-    "main.926d660e.css.map": "/language-app-react-typescript-redux-toolkit-pagination/static/css/main.926d660e.css.map",
-    "main.9d64c118.js.map": "/language-app-react-typescript-redux-toolkit-pagination/static/js/main.9d64c118.js.map"
+    "main.dc295dc4.css.map": "/language-app-react-typescript-redux-toolkit-pagination/static/css/main.dc295dc4.css.map",
+    "main.5c16c0e1.js.map": "/language-app-react-typescript-redux-toolkit-pagination/static/js/main.5c16c0e1.js.map"
   },
   "entrypoints": [
-    "static/css/main.926d660e.css",
-    "static/js/main.9d64c118.js"
+    "static/css/main.dc295dc4.css",
+    "static/js/main.5c16c0e1.js"
   ]
 }
