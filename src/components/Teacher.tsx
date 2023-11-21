@@ -1,13 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { setShowModal } from "../redux/ModalSlice";
-import {
-  setModalName,
-  setModalEmail,
-  setModalSkypeID,
-  setModalPlatform,
-  setModalWhatsApp,
-} from "../redux/ModalDataSlice";
+import { setModalName, setModalEmail, setModalSkypeID, setModalPlatform, setModalWhatsApp } from "../redux/ModalDataSlice";
 import TeacherInterface from "../interfaces/TeacherInterface";
 import styles from "./Teacher.module.css";
 

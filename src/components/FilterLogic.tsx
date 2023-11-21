@@ -57,7 +57,3 @@ const FilterLogic = () => {
 };
 
 export default FilterLogic;
-
-// {filteredArray.length > teachersToShow && (
-//   <ViewMoreTeachers/>
-// )}

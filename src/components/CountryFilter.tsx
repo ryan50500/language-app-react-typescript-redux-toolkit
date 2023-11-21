@@ -37,10 +37,7 @@ const CountryFilter = () => {
             />
             {/* conditionally show country cross SVG */}
             {showCountry && country.length > 0 && (
-              <div
-                className={styles.price__cross}
-                onClick={removeCountryFilter}
-              >
+              <div className={styles.price__cross} onClick={removeCountryFilter}>
                 <svg
                   height="9"
                   viewBox="0 0 12 12"

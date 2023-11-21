@@ -1,47 +1,51 @@
-
-
 /* on hover availability display */
 .hover__wrapper {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    border-radius: 20px;
-    padding: 1rem;
-    width: 295px;
-  }
-  .hover__container {
-    display: block;
-    background-color: white;
-    width: 528px;
-    margin: 0.5rem auto 0 auto;
-    padding: 0;
-    align-items: flex-start;
-  }
-  .hover__time, .hover__day {
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  .hover__slots {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem 0;
-  }
-  .hover__each__slot {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-  }
-  .svg-icon {
-    width: 24px;
-    height: 24px;
-  }
-  .hover__days {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-  
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 1rem;
+  width: 295px;
+}
+.hover__container {
+  display: block;
+  background-color: white;
+  width: 528px;
+  margin: 0.5rem auto 0 auto;
+  padding: 0;
+  align-items: flex-start;
+}
+.hover__time,
+.hover__day {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.hover__slots {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.hover__each__slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.hover__each__slot:hover {
+  color: #3bb3bd;
+}
+.svg-icon {
+  width: 24px;
+  height: 24px;
+}
+.hover__days {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.hover__days div:hover {
+  color: #3bb3bd;
+}
